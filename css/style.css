@@ -1,0 +1,198 @@
+/* ---- Base Styles ----*/
+
+html{
+  font-size: 16px;
+}
+
+
+html body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  font-family: 'open sans', sans-serif;
+  font-size: 0.75em;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  background-color: #DAF7F6;
+  width: 100%;
+}
+
+h1{
+  font-family: "Montserrat";
+  font-size: 3em;
+  color: #F16059;
+  text-transform: uppercase;
+}
+
+h2{
+  font-family: "Montserrat";
+  font-size: 1.5em;
+  color: #F16059;
+  text-transform: uppercase;
+}
+
+h3{
+  font-family: "Montserrat";
+  font-size: 1em;
+  color: #F16059;
+  text-transform: uppercase;
+}
+
+
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 90%;
+}
+
+/* ---- HEADER ---- */
+
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+header .content-wrapper{
+  flex-flow: row wrap;
+}
+
+header figure{
+  margin: 0.75em;
+}
+
+header figure img{
+  width: 100%;
+}
+
+header h1{
+  text-align: center;
+}
+
+
+/* ---- MAIN ---- */
+
+
+.card {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  width: 80%;
+  background: #FFFFFF;
+  margin: 10px 0;
+}
+
+/* Prep time info */
+
+.time {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+}
+
+.prep, .cook, .total{
+  display: flex;
+  width: 30%;
+  flex-flow: row nowrap;
+  border-top: 1px black solid;
+  border-right: 1px black solid;
+  border-bottom: 1px black solid;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.prep{
+  border-left: 1px black solid;
+}
+
+.time-details{
+  text-align: center;
+}
+
+.prep img, .cook img, .total img{
+  width: 20px;
+  height: 20px;
+  padding: 5px 5px;
+}
+
+/* Recipe info */
+
+.recipe{
+  order: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 90%;
+}
+
+.image{
+  order: 2;
+}
+
+.description{
+  text-align: center;
+}
+
+.columns{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.columns h3{
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 3px 10px;
+}
+
+.ingredients, .directions{
+  flex-basis: 100%;
+}
+
+
+/*====== MEDIA QUERIES =======*/
+@media screen and (min-width: 768px){
+  /* Tablet styles */
+
+  .card{
+    flex-flow: row nowrap;
+    justify-content: space-around;
+  }
+
+  .card .image{
+    order: 1;
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .card .image img{
+    width: 100%;
+  }
+
+  .card .recipe{
+    order: 2;
+    flex-basis: 50%;
+  }
+
+  .ingredients, .directions{
+    flex-basis: 50%;
+  }
+
+
+}
