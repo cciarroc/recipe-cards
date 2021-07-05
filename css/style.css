@@ -118,6 +118,7 @@ header h1{
 
 .time-details{
   text-align: center;
+  padding-right: 5px;
 }
 
 .prep img, .cook img, .total img{
@@ -139,6 +140,12 @@ header h1{
 
 .image{
   order: 2;
+  max-width: 90%;
+}
+
+.image img{
+  width: 100%;
+  height: auto;
 }
 
 .description{
@@ -164,12 +171,13 @@ header h1{
 
 
 /*====== MEDIA QUERIES =======*/
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1024px){
   /* Tablet styles */
 
   .card{
     flex-flow: row nowrap;
     justify-content: space-around;
+    align-items: stretch;
   }
 
   .card .image{
@@ -182,17 +190,38 @@ header h1{
   }
 
   .card .image img{
-    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    max-width: 100%;
   }
 
   .card .recipe{
     order: 2;
     flex-basis: 50%;
+    align-self: flex-start;
+  }
+
+  .description{
+    width: 90%;
+  }
+
+  .columns{
+    width: 90%;
+    align-items: flex-start;
+    justify-content: space-between;
   }
 
   .ingredients, .directions{
-    flex-basis: 50%;
+    flex-basis: 47%;
   }
 
+}
+
+@media screen and (min-width: 1200px){
+  /* Desktop styles */
+
+  .card .image img{
+    width: 100%;
+  }
 
 }
